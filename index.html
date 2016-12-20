@@ -8,7 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="css/monopoly.css" rel="stylesheet"/>
-
+  
+ 
 </head>
 <body>
 
@@ -114,5 +115,38 @@
     </div>
     
 </div>
+
+ <script type="text/javascript">
+  $(document).ready(function(){
+      var i = 0;
+      var directionForward = true;
+      setInterval(function(){ highlightTile(); }, 100);
+      
+      
+      function highlightTile(){
+          
+          if(directionForward){
+              i = i+1;
+              if(i<=40){
+              $("#tile"+ i).css("background-color", "green");
+              }else{
+                  directionForward = !directionForward;
+              }
+          }else{
+              
+              i = i-1;
+              if(i > 0){
+                  $("#tile"+ i).css("background-color", "transparent");
+              }else{
+                  directionForward = !directionForward;
+              }
+          }
+          
+         
+      }
+  });
+  
+ 
+  </script>
 </body>
 </html>
