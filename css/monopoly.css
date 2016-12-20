@@ -2,3 +2,6 @@
     height:50px;
     border:1px solid;
 }
+.gamerow > .col-sm-9{
+    border:none;
+}
